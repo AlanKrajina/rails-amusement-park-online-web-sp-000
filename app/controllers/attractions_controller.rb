@@ -16,7 +16,13 @@ class AttractionsController < ApplicationController
   end
 
   def create
+    @attraction = Attraction.create(attr_params)
+  end
 
+  private
+
+  def attr_params
+    params.require(:post).permit(:title, :content, category_ids:[])
   end
 
 end
