@@ -11,12 +11,12 @@
 <h1>Listing attractions</h1>
 
 
-  <ul>
+<tr>
     <% @attractions.each do |att| %>
-      <li>Name<%= att.name %></li>
-      <li>Tickets<%= att.tickets %></li>
-      <li><%= link_to "Go to #{att.name}", attraction_path(att) %></li>
+      <td>Name<%= att.name %></td>
+      <td>Tickets<%= att.tickets %></td>
+      <td><%= link_to "Go to #{att.name}", attraction_path(att) %></td>
     <% end %>
-  </ul>
+  </tr>
 
 <% end %>
