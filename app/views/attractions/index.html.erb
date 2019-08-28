@@ -14,7 +14,7 @@
 <tr>
   <td>Name</td></br>
     <% @attractions.each do |att| %>
-      <td><%= att.name %></td>
+      <td><%= att.name %></td></br>
       <td>Tickets<%= att.tickets %></td>
       <td><%= link_to "Go to #{att.name}", attraction_path(att) %></td>
     <% end %>
