@@ -5,6 +5,16 @@
 <p><strong>Nausea Rating: </strong><%=  @attraction.nausea_rating %></p>
 <p><strong>Happiness Rating: </strong><%=  @attraction.happiness_rating %></p>
 
+<% if current_user.admin %>
+
+<%= form_tag("/rides", method: "post") do %>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :attraction_id, @attraction.id %>
+  <%= button_tag "Go on this ride" %>
+<% end %>
+
+<% else %>
+
 <%= form_tag("/rides", method: "post") do %>
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   <%= hidden_field_tag :attraction_id, @attraction.id %>
