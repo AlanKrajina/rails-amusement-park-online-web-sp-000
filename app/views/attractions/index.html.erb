@@ -12,21 +12,22 @@
 
 
 <tr>
-  <td>Name</td></br>
+  <td>Name</td>
+  <td>Tickets</td>
+  <td>Details</td>
+</tr>
+  
     <% @attractions.each do |att| %>
       <td><%= att.name %></td></br>
     <% end %>
-  </tr>
 
   <tr>
-    <td>Tickets</td></br>
       <% @attractions.each do |att| %>
         <td><%= att.tickets %></td></br>
       <% end %>
     </tr>
 
     <tr>
-      <td>Details</td></br>
         <% @attractions.each do |att| %>
           <td><%= link_to "Go to #{att.name}", attraction_path(att) %></td></br>
         <% end %>
