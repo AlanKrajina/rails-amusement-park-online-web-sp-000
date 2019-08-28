@@ -22,7 +22,7 @@ class AttractionsController < ApplicationController
   private
 
   def attr_params
-    params.require(:attraction).permit(:title, :content, category_ids:[])
+    params.require(:attraction).permit(:name, :height, :nausea_rating, :happiness_rating, :min_height)
   end
 
 end
