@@ -23,13 +23,13 @@
 
       <% @attractions.each do |att| %>
         <td><%= att.tickets %></td></br>
-      <% end %>
+      <% end %></br>
 
       <td><strong>Details</strong></td></br>
 
         <% @attractions.each do |att| %>
           <td><%= link_to "Go to #{att.name}", attraction_path(att) %></td></br>
-        <% end %>
+        <% end %></br>
       </tr>
 
 <% end %>
