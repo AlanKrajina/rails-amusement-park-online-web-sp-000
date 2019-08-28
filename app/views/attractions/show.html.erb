@@ -4,8 +4,6 @@
 <p><strong>Height Requirement: </strong><%=  @attraction.min_height %> inches</p>
 <p><strong>Nausea Rating: </strong><%=  @attraction.nausea_rating %></p>
 <p><strong>Happiness Rating: </strong><%=  @attraction.happiness_rating %></p>
-<%= binding.pry %>
-<button><%= link_to "Go on this ride", users_path(@user) %></button>
 
 <%= form_tag("/rides", method: "post") do %>
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
