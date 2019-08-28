@@ -32,11 +32,7 @@ class AttractionsController < ApplicationController
   def update
 #    @attraction = Attraction.find(params[:id])
     @attraction.update(attr_params)
-    if @attraction.save
-      redirect_to attraction_path(@attraction)
-    else
-      render :edit
-    end
+    redirect_to attraction_path(@attraction)
   end
   end
 
