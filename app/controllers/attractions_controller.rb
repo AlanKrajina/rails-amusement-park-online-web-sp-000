@@ -38,6 +38,7 @@ class AttractionsController < ApplicationController
       render :edit
     end
   end
+  end
 
   private
 
