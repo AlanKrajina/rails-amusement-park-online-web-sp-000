@@ -7,11 +7,8 @@
 
 <% if current_user.admin %>
 
-<%= form_tag("/attractions", method: "patch") do %>
-  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-  <%= hidden_field_tag :attraction_id, @attraction.id %>
-  <%= button_tag "Go on this ride" %>
-<% end %>
+<p><%= link_to "Go on #{att.name}", attraction_path(att) %></p>
+
 
 <% else %>
 
