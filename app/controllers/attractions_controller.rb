@@ -22,7 +22,7 @@ class AttractionsController < ApplicationController
   private
 
   def attr_params
-    params.require(:post).permit(:title, :content, category_ids:[])
+    params.require(:attraction).permit(:title, :content, category_ids:[])
   end
 
 end
