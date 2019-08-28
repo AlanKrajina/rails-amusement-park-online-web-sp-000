@@ -1,5 +1,4 @@
 class AttractionsController < ApplicationController
-  before_action :find_attraction, only: [:show, :edit, :update]
 
   def show
     @attraction = Attraction.find(params[:id])
@@ -26,10 +25,6 @@ class AttractionsController < ApplicationController
   end
 
   private
-
-    def find_attraction
-      @attraction = Attraction.find_by(id: params[:id])
-    end
 
   def attr_params
     params.require(:attraction).permit(:name, :height, :nausea_rating, :happiness_rating, :min_height)
