@@ -17,6 +17,7 @@ class AttractionsController < ApplicationController
 
   def create
     @attraction = Attraction.create(attr_params)
+    redirect_to attraction_path
   end
 
   private
